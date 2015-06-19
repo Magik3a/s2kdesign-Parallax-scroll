@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CFE83746-701B-4B28-9750-09655C54FFF9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SiteScrollDownEffect</RootNamespace>
+    <AssemblyName>SiteScrollDownEffect</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\style.min.css">
+      <DependentUpon>style.css</DependentUpon>
+    </Content>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="books\AJAX A Beginner%27s Guide Sep.2008.pdf" />
+    <Content Include="books\Android Application Development for Dummies.pdf" />
+    <Content Include="books\Apress.Pro.Windows.8.Development.with.HTML5.and.JavaScript.2012.RETAIL.eBook-repackb00k.pdf" />
+    <Content Include="books\arduino\arduino_knijka_za_programirane_v1.pdf" />
+    <Content Include="books\arduino\Beginning Android ADK with Arduino.pdf" />
+    <Content Include="books\arduino\Programming Your Home - Mike Riley.pdf" />
+    <Content Include="books\C++ BG.rar" />
+    <Content Include="books\csharp\Concurrency_in_C#_Cookbook.pdf" />
+    <Content Include="books\csharp\Head_First_C#,_3rd_Edition.pdf" />
+    <Content Include="books\csharp\Microsoft_Visual_C#_2013_Step_by_Step.pdf" />
+    <Content Include="books\html-css\HTML, XHTML, and CSS Bible, 3rd Edition.pdf" />
+    <Content Include="books\html-css\HTML-CSS-Javascript.doc" />
+    <Content Include="books\html-css\Pro CSS and HTML Design Patterns.pdf" />
+    <Content Include="books\html-css\The CSS3 Anthology 4th Edition - 2012.pdf" />
+    <Content Include="books\Html5 and JavaScript Projects\HTML5 and Javascript Projects.pdf" />
+    <Content Include="books\Perl BG.doc" />
+    <Content Include="books\python\Python- [Bulgarian].pdf" />
+    <Content Include="books\Rykowodstwo_po_programirane_na_Bazata_na_ezika_JAVA.doc" />
+    <Content Include="images\bg.jpg" />
+    <Content Include="images\clouds\1.png" />
+    <Content Include="images\clouds\2.png" />
+    <Content Include="images\clouds\3.png" />
+    <Content Include="images\clouds\4.png" />
+    <Content Include="images\clouds\scroll1.png" />
+    <Content Include="images\scroll1.png" />
+    <Content Include="profile\fonts\fontawesome-webfont.eot" />
+    <Content Include="profile\fonts\fontawesome-webfont.ttf" />
+    <Content Include="profile\fonts\fontawesome-webfont.woff" />
+    <Content Include="profile\fonts\FontAwesome.otf" />
+    <Content Include="profile\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="profile\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="profile\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="profile\font\fonts\fontawesome-webfont.eot" />
+    <Content Include="profile\font\fonts\fontawesome-webfont.ttf" />
+    <Content Include="profile\font\fonts\fontawesome-webfont.woff" />
+    <Content Include="profile\font\fonts\FontAwesome.otf" />
+    <Content Include="profile\font\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="profile\font\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="profile\font\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="profile\font\less\bordered-pulled.less" />
+    <Content Include="profile\font\less\core.less" />
+    <Content Include="profile\font\less\fixed-width.less" />
+    <Content Include="profile\font\less\font-awesome.less" />
+    <Content Include="profile\font\less\icons.less" />
+    <Content Include="profile\font\less\larger.less" />
+    <Content Include="profile\font\less\list.less" />
+    <Content Include="profile\font\less\mixins.less" />
+    <Content Include="profile\font\less\path.less" />
+    <Content Include="profile\font\less\rotated-flipped.less" />
+    <Content Include="profile\font\less\spinning.less" />
+    <Content Include="profile\font\less\stacked.less" />
+    <Content Include="profile\font\less\variables.less" />
+    <Content Include="profile\font\scss\font-awesome.scss" />
+    <Content Include="profile\font\scss\_bordered-pulled.scss" />
+    <Content Include="profile\font\scss\_core.scss" />
+    <Content Include="profile\font\scss\_fixed-width.scss" />
+    <Content Include="profile\font\scss\_icons.scss" />
+    <Content Include="profile\font\scss\_larger.scss" />
+    <Content Include="profile\font\scss\_list.scss" />
+    <Content Include="profile\font\scss\_mixins.scss" />
+    <Content Include="profile\font\scss\_path.scss" />
+    <Content Include="profile\font\scss\_rotated-flipped.scss" />
+    <Content Include="profile\font\scss\_spinning.scss" />
+    <Content Include="profile\font\scss\_stacked.scss" />
+    <Content Include="profile\font\scss\_variables.scss" />
+    <Content Include="profile\js\fancybox\Descr.WD3" />
+    <Content Include="css\style.less" />
+    <Content Include="css\style.css.map">
+      <DependentUpon>style.css</DependentUpon>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="article.html" />
+    <Content Include="books.html" />
+    <Content Include="books\030414-html3-100275353-orig.jpg" />
+    <Content Include="books\ajax.jpg" />
+    <Content Include="books\android for dummies.jpg" />
+    <Content Include="books\arduino\Android with arduino.jpg" />
+    <Content Include="books\arduino\arduino-logo-propio.jpg" />
+    <Content Include="books\arduino\program you home.jpg" />
+    <Content Include="books\cpp.jpg" />
+    <Content Include="books\csharp\c_sharp_Cookbook.jpg" />
+    <Content Include="books\csharp\Head_First_C_sharp.jpg" />
+    <Content Include="books\csharp\Step_by_step_C_sharp.jpg" />
+    <Content Include="books\html-css\html,Xhtml,3rd,edition.jpg" />
+    <Content Include="books\html-css\html5-css3-js.png" />
+    <Content Include="books\html-css\Pro CSS and Html Design Patterns.jpg" />
+    <Content Include="books\html-css\the css3 anthology.jpg" />
+    <Content Include="books\java_tech.jpg" />
+    <Content Include="books\perl_logo.jpg" />
+    <Content Include="books\python\pythonlogo.jpg" />
+    <Content Include="books\Windows 8 development.jpg" />
+    <Content Include="browserconfig.xml" />
+    <Content Include="clips.html" />
+    <Content Include="contact.html" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\style.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="images\front.png" />
+    <Content Include="images\horizon.png" />
+    <Content Include="images\middle.png" />
+    <Content Include="index.html" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\changepage.js" />
+    <Content Include="js\jquery.jInvertScroll.js" />
+    <Content Include="profile\css\bootstrap.min.css" />
+    <Content Include="profile\css\da-slider.css" />
+    <Content Include="profile\css\isotope.css" />
+    <Content Include="profile\css\styles.css" />
+    <Content Include="profile\css\styles.min.css" />
+    <Content Include="profile\favicon.ico" />
+    <Content Include="profile\fonts\fontawesome-webfont.svg" />
+    <Content Include="profile\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="profile\font\css\font-awesome.css" />
+    <Content Include="profile\font\css\font-awesome.min.css" />
+    <Content Include="profile\font\fonts\fontawesome-webfont.svg" />
+    <Content Include="profile\font\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="profile\images\arrows.png" />
+    <Content Include="profile\images\background.jpg" />
+    <Content Include="profile\images\background2.jpg" />
+    <Content Include="profile\images\clients\client-1.png" />
+    <Content Include="profile\images\clients\client-2.png" />
+    <Content Include="profile\images\clients\client-3.png" />
+    <Content Include="profile\images\clients\client-4.png" />
+    <Content Include="profile\images\clients\client-5.png" />
+    <Content Include="profile\images\clients\client-6.png" />
+    <Content Include="profile\images\clients\client-7.png" />
+    <Content Include="profile\images\clients\client-8.png" />
+    <Content Include="profile\images\clients\client-9.png" />
+    <Content Include="profile\images\portfolio\joomla1.jpg" />
+    <Content Include="profile\images\portfolio\s2k1.jpg" />
+    <Content Include="profile\images\portfolio\s2k2.jpg" />
+    <Content Include="profile\images\portfolio\wordpress1.jpg" />
+    <Content Include="profile\index.html" />
+    <Content Include="profile\js\bootstrap.min.js" />
+    <Content Include="profile\js\custom.js" />
+    <Content Include="profile\js\fancybox\blank.gif" />
+    <Content Include="profile\js\fancybox\fancybox_loading.gif" />
+    <Content Include="profile\js\fancybox\fancybox_loading_402x.gif" />
+    <Content Include="profile\js\fancybox\fancybox_overlay.png" />
+    <Content Include="profile\js\fancybox\fancybox_sprite.png" />
+    <Content Include="profile\js\fancybox\fancybox_sprite_402x.png" />
+    <Content Include="profile\js\fancybox\jquery.fancybox.css" />
+    <Content Include="profile\js\fancybox\jquery.fancybox.pack.js" />
+    <Content Include="profile\js\jquery-1.8.2.min.js" />
+    <Content Include="profile\js\jquery.cslider.js" />
+    <Content Include="profile\js\jquery.isotope.min.js" />
+    <Content Include="profile\js\jquery.nav.js" />
+    <Content Include="profile\js\modernizr-latest.js" />
+    <Content Include="profile\js\owl-carousel\AjaxLoader.gif" />
+    <Content Include="profile\js\owl-carousel\grabbing.png" />
+    <Content Include="profile\js\owl-carousel\owl.carousel.css" />
+    <Content Include="profile\js\owl-carousel\owl.carousel.js" />
+    <Content Include="profile\js\owl-carousel\owl.carousel.min.js" />
+    <Content Include="profile\js\owl-carousel\owl.theme.css" />
+    <Content Include="profile\js\owl-carousel\owl.transitions.css" />
+    <Content Include="testIndex.html" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>14960</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:14960/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

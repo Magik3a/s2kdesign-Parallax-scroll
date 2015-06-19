@@ -1,0 +1,280 @@
+﻿html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* hide horizontal scrollbars, since we use the vertical ones to scroll to the right */
+body {
+    overflow-x: hidden;
+    background-attachment: fixed;
+    background-image: url("../images/bg.jpg");
+    background-position: top;
+    background-repeat: repeat;
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: normal;
+    color: #2e6e80;
+}
+
+/**
+  * important: keep position fixed, you can however use top:0 instead of bottom:0
+  * if you want to make it stick to the top of the browser
+  */
+.scroll {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+/**
+  * z-index ordering of the different layers, do this for your layers,
+  * also assign absolute width (to prevent issues if the script gets executed before the images get loaded)
+  */
+.horizon {
+    z-index: 100;
+    width: 3000px;
+}
+/* class for scroll down animation under the main menu*/
+.scrollDown {
+    position: fixed;
+    top: 50px;
+    color: white;
+    width: 200px;
+    height: 45px;
+    left: 45%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 0 0 50px 50px;
+    -webkit-animation: myfirst 2s linear 2s infinite alternate; /* Chrome, Safari, Opera */
+    -moz-animation: myfirst 2s linear 2s infinite alternate;
+    -o-animation: myfirst 2s linear 2s infinite alternate;
+    animation: myfirst 2s linear 2s infinite alternate;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes myfirst {
+    0% {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    25% {
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    50% {
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    75% {
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    100% {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+}
+
+/* Standard syntax */
+@keyframes myfirst {
+    0% {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    25% {
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    50% {
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    75% {
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    100% {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+}
+
+.scrollDown .glyphicon {
+    display: block;
+    font-size: 24px;
+}
+
+.middle {
+    top: 10%;
+    z-index: 9000;
+    width: 4000px;
+}
+
+.middle > img {
+    z-index: 900;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+.front {
+    z-index: 1000;
+    width: 6000px;
+}
+.balloons{
+     margin-top: 1000px;
+    width: 10%;
+    height: 4%;
+    margin-left: 10%;
+
+}
+.ballonOne{
+     margin-top: 1000px;
+     background-image: url(../images/clouds/ballon.png);
+     background-size: contain;
+     background-repeat: no-repeat;
+}
+.ballonTwo{
+    margin-left: 20%;
+     background-image: url(../images/clouds/ballon1.png);
+     background-size: contain;
+     background-repeat: no-repeat;
+      
+}
+.ballonTree{
+    margin-left: 40%;
+     background-image: url(../images/clouds/ballon2.png);
+     background-size: contain;
+     background-repeat: no-repeat;
+ 
+}
+.ballonFour{
+    margin-left: 60%;
+     background-image: url(../images/clouds/ballon1.png);
+     background-size: contain;
+     background-repeat: no-repeat;
+}
+.ballonFive{
+    margin-left: 80%;
+     background-image: url(../images/clouds/ballon2.png);
+     background-size: contain;
+     background-repeat: no-repeat;
+}
+.post-preview {
+    -moz-box-shadow: #535353 1px 0 5px;
+    -webkit-box-shadow: #535353 1px 0 5px;
+    box-shadow: #535353 1px 0 5px;
+    display: inline-block;
+    position: relative;
+    z-index: 11199;
+    width: 12%;
+    margin-left: 8%;
+    -ms-text-justify: inherit;
+    text-justify: inherit;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+
+    a {
+        color: #00157a;
+        .post-title{
+            padding: 15px;
+        }
+        .post-subtitle{
+            padding: 10px;
+        }
+    }
+
+    a:hover {
+        color: #343c64;
+        text-decoration: none;
+    }
+
+    a:active {
+        text-decoration: none;
+    }
+
+    a:link {
+        text-decoration: none;
+    }
+
+    a:visited {
+        text-decoration: none;
+    }
+}
+
+.footer {
+    border-top: solid 2px #535353;
+    z-index: 11999;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background-color: #F8F8F8;
+    text-align: center;
+}
+//start the page with clips
+.clips-preview {
+    display: inline-block;
+    position: relative;
+    z-index: 200;
+    height: 500px;
+    width: 800px;
+    margin-left: 8%;
+}
+
+.clips-preview > iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.button-video-play {
+    display: inline;
+    position: relative;
+    z-index: 200;
+    
+    margin-left: 10%;
+}
+//end the page with clips
+
+//start the page with books
+#page-menu-books{
+    position: fixed;
+    bottom: 50px;
+    left: 42%;
+    background-color:  rgba(255, 255, 255, 0.8);
+    z-index: 11999;
+    font-size: 24px;
+    width: 250px;
+    text-align: center;
+    border-radius: 10px;
+    button{
+        margin: 15px;
+    }
+}
+
+.books{
+    top: 100px;
+    position: absolute;
+   vertical-align: top;
+   width: 100%;
+   z-index: 20000;
+}
+.book{
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    text-align: center;
+    width: 400px;
+    margin-left: 5%;
+    display: inline-block;
+     vertical-align: inherit;
+    margin-top: 0;
+    img{
+        width: 100%;
+        height: 300px;
+    }
+}
+//end the page with books

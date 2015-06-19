@@ -1,0 +1,30 @@
+<div class="clips-preview">
+    <button type="button" class="button-video-play">Натисни тук за да отвориш видеото</button>
+    <div style="display:none;" class="embed-responsive embed-responsive-16by9 video-load">
+        <iframe src="https://www.youtube.com/embed/4m8U_7kPV9Q?list=PLF4lVL1sPDSn0iG8qSv8qH0VjAkUlpUED" allowfullscreen></iframe>
+    </div>
+    </div>
+<div class="clips-preview">
+    <button type="button" class="button-video-play">Натисни тук за да отвориш видеото</button>
+    <div style="display:none;" class="embed-responsive embed-responsive-16by9 video-load">
+        <iframe src="https://www.youtube.com/embed/4m8U_7kPV9Q?list=PLF4lVL1sPDSn0iG8qSv8qH0VjAkUlpUED" allowfullscreen></iframe>
+    </div>
+</div>
+<div class="clips-preview">
+    <button type="button" class="button-video-play">Натисни тук за да отвориш видеото</button>
+    <div style="display:none;" class="embed-responsive embed-responsive-16by9 video-load">
+        <iframe src="https://www.youtube.com/embed/4m8U_7kPV9Q?list=PLF4lVL1sPDSn0iG8qSv8qH0VjAkUlpUED" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+<script>
+    $(function () {
+        $(".button-video-play").click(function () {
+            $(this).hide(1000, function () {
+                $(this).siblings().fadeIn(1000).removeAttr("style");
+            });
+        });
+    });
+
+</script>

@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>s2kdesign.com</title>
+       <link rel="stylesheet" href="css/style.min.css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a id="news" class="navbar-brand" href="#"><span class="glyphicon glyphicon-home buttons-header-glyph"></span> HOME</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" id="clips"><span class="glyphicon glyphicon-facetime-video buttons-header-glyph"></span><span class="buttons-header"> video</span></a>
+                    </li>
+                    <li>
+                        <a href="#" id="books"><span class="glyphicon glyphicon-book buttons-header-glyph"></span><span class="buttons-header"> books</span></a>
+                    </li>
+                    <li>
+
+                        <a href="animations/index.html"><span class="glyphicon glyphicon-modal-window buttons-header-glyph"></span><span class="buttons-header"> Animations</span></a>
+                    </li>
+
+                    <li>
+                        <a href="profile/index.html"><span class="glyphicon glyphicon-envelope buttons-header-glyph"></span><span class="buttons-header"> my profile</span></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div class="scrollDown"><span id="scrollButton"><span>scroll down</span><span class="glyphicon glyphicon-chevron-down"></span></span> </div>
+
+    <div class="horizon scroll">
+
+        <img src="images/clouds/scroll1.png" alt="" />
+    </div>
+    <div class="balloons ballonOne"></div>
+    <div class="balloons ballonTwo"></div>
+    <div class="balloons ballonTree"></div>
+    <div class="balloons ballonFour"></div>
+    <div class="balloons ballonFive"></div>
+
+    <div class="middle scroll">
+        <div id="pages">
+
+            <div>s1</div>
+            <div>s2</div>
+            <div>s3</div>
+            <div>s4</div>
+            <div>s5</div>
+
+
+
+        </div>
+
+        <img src="images/clouds/scroll1.png" alt="" />
+    </div>
+
+
+    <div class="front scroll">
+        <img src="images/clouds/scroll1.png" alt="" />
+    </div>
+
+    <div class="footer"><p>Copyright &copy; www.s2kdesign.com 2015</p></div>
+    <!--Script Jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!--Script horizontal nav-->
+    <script type="text/javascript" src="js/jquery.jInvertScroll.js"></script>
+    <!--Script menu click-->
+    <script src="js/changepage.js"></script>
+    <script type="text/javascript">
+        (function ($) {
+
+            $.jInvertScroll(['.scroll'],        // an array containing the selector(s) for the elements you want to animate
+                {
+                    height: 6000,                   // optional: define the height the user can scroll, otherwise the overall length will be taken as scrollable height
+                    onScroll: function (percent) {   //optional: callback function that will be called when the user scrolls down, useful for animating other things on the page
+                        console.log(percent);
+                        if (percent > 0.755) {
+                            $("#scrollButton").fadeOut(function () {
+                                $(this).replaceWith('<span id="scrollButton"><span>scroll up</span><span class="glyphicon glyphicon-chevron-up"></span></span>')
+                            });
+                            //$(".scrollDown").replaceWith('<div class="scrollDown"> scroll down<span class="glyphicon glyphicon-chevron-down"></span></div>');
+
+                        }
+                        else {
+
+                            $("#scrollButton").fadeIn(function () {
+                                $(this).replaceWith('<span id="scrollButton"><span>scroll down</span><span class="glyphicon glyphicon-chevron-down"></span></span>')
+
+                            });
+
+                            //$(".scrollDown").replaceWith('<div class="scrollDown"> scroll up<span class="glyphicon glyphicon-chevron-down"></span></div>');
+                        }
+                    }
+                });
+        }(jQuery));
+    </script>
+
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
