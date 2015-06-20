@@ -20,6 +20,9 @@ h1 {
     color: #2e6e80;
 }
 
+.navbar {
+    z-index: 2000 !important;
+}
 /**
   * important: keep position fixed, you can however use top:0 instead of bottom:0
   * if you want to make it stick to the top of the browser
@@ -29,6 +32,18 @@ h1 {
     bottom: 0;
     left: 0;
 }
+//styles for the flying arrow
+.arrow{
+    z-index: 10000;
+    position: fixed;
+       top: 90%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background-image: url('../images/arrow.png');
+    background-size:contain;
+    background-repeat: no-repeat;
+}
 
 /**
   * z-index ordering of the different layers, do this for your layers,
@@ -37,6 +52,7 @@ h1 {
 .horizon {
     z-index: 100;
     width: 3000px;
+ 
 }
 /* class for scroll down animation under the main menu*/
 .scrollDown {
@@ -108,7 +124,7 @@ h1 {
 
 .middle {
     top: 10%;
-    z-index: 9000;
+    z-index: 1500;
     width: 4000px;
 }
 
@@ -124,52 +140,66 @@ h1 {
     z-index: 1000;
     width: 6000px;
 }
-.balloons{
-     margin-top: 1000px;
-    width: 10%;
-    height: 4%;
-    margin-left: 10%;
 
+.balloons {
+    margin-top: 600px;
+    position: relative;
+    width: 150px;
+    height: 200px;
+    margin-left: 10%;
+    z-index: 1601;
+
+    img {
+          -webkit-box-shadow: 0 0 3px 1px rgba(56,114,201,0.89) , 0 0 4px 2px rgba(242,242,242,1) inset, 0 0 7px 3px rgba(0,0,0,1) ;
+  box-shadow: 0 0 3px 1px rgba(56,114,201,0.89) , 0 0 4px 2px rgba(242,242,242,1) inset, 0 0 7px 3px rgba(0,0,0,1) ;
+        margin-top: 70%;
+        height: 50%;
+        width: 130%;
+    }
 }
-.ballonOne{
-     margin-top: 1000px;
-     background-image: url(../images/clouds/ballon.png);
-     background-size: contain;
-     background-repeat: no-repeat;
+
+.ballonOne {
+    margin-top: 100%;
+    background-image: url(../images/clouds/ballon.png);
+    background-size: 40%;
+    background-repeat: no-repeat;
 }
-.ballonTwo{
+
+.ballonTwo {
     margin-left: 20%;
-     background-image: url(../images/clouds/ballon1.png);
-     background-size: contain;
-     background-repeat: no-repeat;
-      
+    background-image: url(../images/clouds/ballon1.png);
+    background-size: 85%;
+    background-repeat: no-repeat;
 }
-.ballonTree{
+
+.ballonTree {
     margin-left: 40%;
-     background-image: url(../images/clouds/ballon2.png);
-     background-size: contain;
-     background-repeat: no-repeat;
- 
+    background-image: url(../images/clouds/ballon2.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
 }
-.ballonFour{
+
+.ballonFour {
     margin-left: 60%;
-     background-image: url(../images/clouds/ballon1.png);
-     background-size: contain;
-     background-repeat: no-repeat;
+    background-image: url(../images/clouds/ballon1.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
 }
-.ballonFive{
-    margin-left: 80%;
-     background-image: url(../images/clouds/ballon2.png);
-     background-size: contain;
-     background-repeat: no-repeat;
+
+.ballonFive {
+    margin-left: 70%;
+    background-image: url(../images/clouds/ballon2.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
 }
+
 .post-preview {
     -moz-box-shadow: #535353 1px 0 5px;
     -webkit-box-shadow: #535353 1px 0 5px;
     box-shadow: #535353 1px 0 5px;
     display: inline-block;
     position: relative;
-    z-index: 11199;
+    z-index: 1000;
     width: 12%;
     margin-left: 8%;
     -ms-text-justify: inherit;
@@ -179,10 +209,12 @@ h1 {
 
     a {
         color: #00157a;
-        .post-title{
+
+        .post-title {
             padding: 15px;
         }
-        .post-subtitle{
+
+        .post-subtitle {
             padding: 10px;
         }
     }
@@ -235,44 +267,46 @@ h1 {
     display: inline;
     position: relative;
     z-index: 200;
-    
     margin-left: 10%;
 }
 //end the page with clips
 
 //start the page with books
-#page-menu-books{
+#page-menu-books {
     position: fixed;
     bottom: 50px;
     left: 42%;
-    background-color:  rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.8);
     z-index: 11999;
     font-size: 24px;
     width: 250px;
     text-align: center;
     border-radius: 10px;
-    button{
+
+    button {
         margin: 15px;
     }
 }
 
-.books{
+.books {
     top: 100px;
     position: absolute;
-   vertical-align: top;
-   width: 100%;
-   z-index: 20000;
+    vertical-align: top;
+    width: 100%;
+    z-index: 20000;
 }
-.book{
+
+.book {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 15px;
     text-align: center;
     width: 400px;
     margin-left: 5%;
     display: inline-block;
-     vertical-align: inherit;
+    vertical-align: inherit;
     margin-top: 0;
-    img{
+
+    img {
         width: 100%;
         height: 300px;
     }

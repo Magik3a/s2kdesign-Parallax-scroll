@@ -17,6 +17,9 @@ h1 {
   font-weight: normal;
   color: #2e6e80;
 }
+.navbar {
+  z-index: 2000 !important;
+}
 /**
   * important: keep position fixed, you can however use top:0 instead of bottom:0
   * if you want to make it stick to the top of the browser
@@ -25,6 +28,17 @@ h1 {
   position: fixed;
   bottom: 0;
   left: 0;
+}
+.arrow {
+  z-index: 10000;
+  position: fixed;
+  top: 90%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  background-image: url('../images/arrow.png');
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 /**
   * z-index ordering of the different layers, do this for your layers,
@@ -93,7 +107,7 @@ h1 {
 }
 .middle {
   top: 10%;
-  z-index: 9000;
+  z-index: 1500;
   width: 4000px;
 }
 .middle > img {
@@ -108,39 +122,48 @@ h1 {
   width: 6000px;
 }
 .balloons {
-  margin-top: 1000px;
-  width: 10%;
-  height: 4%;
+  margin-top: 600px;
+  position: relative;
+  width: 150px;
+  height: 200px;
   margin-left: 10%;
+  z-index: 1601;
+}
+.balloons img {
+  -webkit-box-shadow: 0 0 3px 1px rgba(56, 114, 201, 0.89), 0 0 4px 2px #f2f2f2 inset, 0 0 7px 3px #000000;
+  box-shadow: 0 0 3px 1px rgba(56, 114, 201, 0.89), 0 0 4px 2px #f2f2f2 inset, 0 0 7px 3px #000000;
+  margin-top: 70%;
+  height: 50%;
+  width: 130%;
 }
 .ballonOne {
-  margin-top: 1000px;
+  margin-top: 100%;
   background-image: url(../images/clouds/ballon.png);
-  background-size: contain;
+  background-size: 40%;
   background-repeat: no-repeat;
 }
 .ballonTwo {
   margin-left: 20%;
   background-image: url(../images/clouds/ballon1.png);
-  background-size: contain;
+  background-size: 85%;
   background-repeat: no-repeat;
 }
 .ballonTree {
   margin-left: 40%;
   background-image: url(../images/clouds/ballon2.png);
-  background-size: contain;
+  background-size: 80%;
   background-repeat: no-repeat;
 }
 .ballonFour {
   margin-left: 60%;
   background-image: url(../images/clouds/ballon1.png);
-  background-size: contain;
+  background-size: 80%;
   background-repeat: no-repeat;
 }
 .ballonFive {
-  margin-left: 80%;
+  margin-left: 70%;
   background-image: url(../images/clouds/ballon2.png);
-  background-size: contain;
+  background-size: 80%;
   background-repeat: no-repeat;
 }
 .post-preview {
@@ -149,7 +172,7 @@ h1 {
   box-shadow: #535353 1px 0 5px;
   display: inline-block;
   position: relative;
-  z-index: 11199;
+  z-index: 1000;
   width: 12%;
   margin-left: 8%;
   -ms-text-justify: inherit;
