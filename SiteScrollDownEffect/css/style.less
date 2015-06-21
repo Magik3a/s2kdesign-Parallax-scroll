@@ -1,10 +1,4 @@
-﻿html,
-body {
-    padding: 0;
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
+﻿
 /* hide horizontal scrollbars, since we use the vertical ones to scroll to the right */
 body {
     overflow-x: hidden;
@@ -12,13 +6,13 @@ body {
     background-image: url("../images/bg.jpg");
     background-position: top;
     background-repeat: repeat;
+    font-size: 24px;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-h1 {
-    font-size: 20px;
-    font-weight: normal;
-    color: #2e6e80;
-}
+
 
 .navbar {
     z-index: 2000 !important;
@@ -33,18 +27,28 @@ h1 {
     left: 0;
 }
 //styles for the flying arrow
-.arrow{
+.arrow {
     z-index: 10000;
-    position: fixed;
-       top: 90%;
-    left: 50%;
+    position: absolute;
+    top:20%;
+    left: 46%;
     width: 100px;
     height: 100px;
     background-image: url('../images/arrow.png');
-    background-size:contain;
+    background-size: contain;
     background-repeat: no-repeat;
 }
+.crossbow{
+      z-index: 9999;
+    position: fixed;
+    top: 88%;
+    width: 400px;
+    left: 38%;
+    img{
+        width: 100%;
 
+    }
+}
 /**
   * z-index ordering of the different layers, do this for your layers,
   * also assign absolute width (to prevent issues if the script gets executed before the images get loaded)
@@ -52,7 +56,6 @@ h1 {
 .horizon {
     z-index: 100;
     width: 3000px;
- 
 }
 /* class for scroll down animation under the main menu*/
 .scrollDown {
@@ -60,66 +63,17 @@ h1 {
     top: 50px;
     color: white;
     width: 200px;
-    height: 45px;
-    left: 45%;
+    height: 30px;
+    right: 42%;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 0 0 50px 50px;
-    -webkit-animation: myfirst 2s linear 2s infinite alternate; /* Chrome, Safari, Opera */
-    -moz-animation: myfirst 2s linear 2s infinite alternate;
-    -o-animation: myfirst 2s linear 2s infinite alternate;
-    animation: myfirst 2s linear 2s infinite alternate;
-}
-
-/* Chrome, Safari, Opera */
-@-webkit-keyframes myfirst {
-    0% {
-        background-color: rgba(255, 255, 255, 0.2);
-    }
-
-    25% {
-        background-color: rgba(255, 255, 255, 0.4);
-    }
-
-    50% {
-        background-color: rgba(255, 255, 255, 0.7);
-    }
-
-    75% {
-        background-color: rgba(255, 255, 255, 0.4);
-    }
-
-    100% {
-        background-color: rgba(255, 255, 255, 0.2);
-    }
-}
-
-/* Standard syntax */
-@keyframes myfirst {
-    0% {
-        background-color: rgba(255, 255, 255, 0.2);
-    }
-
-    25% {
-        background-color: rgba(255, 255, 255, 0.4);
-    }
-
-    50% {
-        background-color: rgba(255, 255, 255, 0.7);
-    }
-
-    75% {
-        background-color: rgba(255, 255, 255, 0.4);
-    }
-
-    100% {
-        background-color: rgba(255, 255, 255, 0.2);
-    }
-}
+    font-size: 1.5em;
+   }
 
 .scrollDown .glyphicon {
     display: block;
-    font-size: 24px;
+    font-size: 1.5em;
 }
 
 .middle {
@@ -150,12 +104,15 @@ h1 {
     z-index: 1601;
 
     img {
-          -webkit-box-shadow: 0 0 3px 1px rgba(56,114,201,0.89) , 0 0 4px 2px rgba(242,242,242,1) inset, 0 0 7px 3px rgba(0,0,0,1) ;
-  box-shadow: 0 0 3px 1px rgba(56,114,201,0.89) , 0 0 4px 2px rgba(242,242,242,1) inset, 0 0 7px 3px rgba(0,0,0,1) ;
+        -webkit-box-shadow: 0 0 3px 1px rgba(56,114,201,0.89), 0 0 4px 2px rgba(242,242,242,1) inset, 0 0 7px 3px rgba(0,0,0,1);
+        box-shadow: 0 0 3px 1px rgba(56,114,201,0.89), 0 0 4px 2px rgba(242,242,242,1) inset, 0 0 7px 3px rgba(0,0,0,1);
         margin-top: 70%;
         height: 50%;
         width: 130%;
     }
+}
+.balloons:hover{
+    cursor: crosshair;
 }
 
 .ballonOne {
@@ -201,6 +158,7 @@ h1 {
     position: relative;
     z-index: 1000;
     width: 12%;
+    margin-top: 1%;
     margin-left: 8%;
     -ms-text-justify: inherit;
     text-justify: inherit;
@@ -216,6 +174,14 @@ h1 {
 
         .post-subtitle {
             padding: 10px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        h3 {
+            font-size: 1.2em;
         }
     }
 
@@ -237,6 +203,50 @@ h1 {
     }
 }
 
+
+#arrowLeft, #arrowRight {
+    position: fixed;
+    text-align: center;
+    color: gray;
+    top: 85%;
+    margin-bottom: 150px;
+    z-index: 2000;
+    font-size: 5.0em;
+    padding-left: 15px;
+    padding-right: 15px;
+    -moz-box-shadow: #535353 1px 0 5px;
+    -webkit-box-shadow: #535353 1px 0 5px;
+    box-shadow: #535353 1px 0 5px;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.8;
+    cursor: pointer;
+    -moz-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+}
+
+#arrowLeft {
+    display: none;
+    left: 10px;
+    border-radius: 0 15px 15px 0;
+}
+
+#arrowLeft:hover {
+    color: coral;
+}
+
+#arrowRight {
+    right: 10px;
+    border-radius: 15px 0 0 15px;
+}
+
+#arrowRight:hover {
+    color:  coral;
+}
+
+
+
 .footer {
     border-top: solid 2px #535353;
     z-index: 11999;
@@ -244,9 +254,18 @@ h1 {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 30px;
+    height: 50px;
     background-color: #F8F8F8;
     text-align: center;
+    p{
+        margin-top: 15px;
+        display:inline-block;
+    }
+    img{
+        
+        float: right;
+        height: 100%;
+    }
 }
 //start the page with clips
 .clips-preview {
@@ -274,10 +293,10 @@ h1 {
 //start the page with books
 #page-menu-books {
     position: fixed;
-    bottom: 50px;
-    left: 42%;
+   bottom: 50px;
+    left: 12.9%;
     background-color: rgba(255, 255, 255, 0.8);
-    z-index: 11999;
+    z-index: 25000;
     font-size: 24px;
     width: 250px;
     text-align: center;
@@ -289,7 +308,7 @@ h1 {
 }
 
 .books {
-    top: 100px;
+    top: 40px;
     position: absolute;
     vertical-align: top;
     width: 100%;
@@ -308,7 +327,7 @@ h1 {
 
     img {
         width: 100%;
-        height: 300px;
+        height: 250px;
     }
 }
 //end the page with books

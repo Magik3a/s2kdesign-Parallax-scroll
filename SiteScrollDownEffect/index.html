@@ -72,22 +72,28 @@
     </nav>
 
     <div class="scrollDown"><span id="scrollButton"><span>scroll down</span><span class="glyphicon glyphicon-chevron-down"></span></span> </div>
-    <div class="arrow"></div>
+
+    <div class="crossbow"><img src="images/crossbow1.png" alt="crossbow s2kdesign" /> <div class="arrow"></div></div>
     <div class="horizon scroll">
 
         <img src="images/clouds/scroll1.png" alt="" />
     </div>
     <div class="allBalloons">
         <div class="balloons ballonOne">
-            <img src="images/scripts/ballons_parrent.JPG" /> </div>
+            <img src="images/scripts/ballons_parrent.JPG" />
+        </div>
         <div class="balloons ballonTwo">
-            <img src="images/scripts/ballons_child.JPG" /> </div>
+            <img src="images/scripts/ballons_child.JPG" />
+        </div>
         <div class="balloons ballonTree">
-            <img src="images/scripts/jinvert.JPG" /></div>
+            <img src="images/scripts/jinvert.JPG" />
+        </div>
         <div class="balloons ballonFour">
-            <img src="images/scripts/page.JPG" /></div>
+            <img src="images/scripts/page.JPG" />
+        </div>
         <div class="balloons ballonFive">
-<img src="images/scripts/page.JPG" /></div>
+            <img src="images/scripts/page.JPG" />
+        </div>
     </div>
     <div class="middle scroll">
         <div id="pages">
@@ -123,7 +129,7 @@
                     <h3 class="post-subtitle">
                         Microsoft има големи надежди за Windows 10 и иска новата версия на операционната система да бъде най-успешната до момента. Днес Тери Майерсън заяви, че Microsoft иска да види Windows 10 на 1 млрд. устройства в рамките на следващите две или три години след пускането й.
                     </h3>
-                </a>
+                </a> 
                 <p class="post-meta">Posted by <a href="#">Svetlin Krastanov</a> on May 6, 2015</p>
             </div>
 
@@ -147,7 +153,16 @@
         <img src="images/clouds/scroll1.png" alt="" />
     </div>
 
-    <div class="footer"><p>Copyright &copy; www.s2kdesign.com 2015</p></div>
+    <div id="arrowLeft" class="glyphicon glyphicon-hand-left"></div>
+    <div id="arrowRight" class="glyphicon glyphicon-hand-right"></div>
+
+    <div class="footer">
+        <span class="social-icons" >
+           
+        </span>
+        <p>Copyright &copy; www.s2kdesign.com 2015</p>
+        <img src="images/logo.jpg" alt="s2kdesign" />
+    </div>
     <!--Script Jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!--Script horizontal nav-->
@@ -156,27 +171,31 @@
     <script src="js/changepage.js"></script>
     <script type="text/javascript">
         (function ($) {
-
             $.jInvertScroll(['.scroll'],        // an array containing the selector(s) for the elements you want to animate
                 {
                     height: 6000,                   // optional: define the height the user can scroll, otherwise the overall length will be taken as scrollable height
                     onScroll: function (percent) {   //optional: callback function that will be called when the user scrolls down, useful for animating other things on the page
                         console.log(percent);
-                        if (percent > 0.755) {
-                            $("#scrollButton").fadeOut(function () {
-                                $(this).replaceWith('<span id="scrollButton"><span>scroll up</span><span class="glyphicon glyphicon-chevron-up"></span></span>')
-                            });
-                            //$(".scrollDown").replaceWith('<div class="scrollDown"> scroll down<span class="glyphicon glyphicon-chevron-down"></span></div>');
+                        if (percent > 0.200) {
 
                         }
                         else {
 
+                        }
+
+                        if (percent > 0.755) {
+                            $("#arrowLeft").fadeIn();
+                            $("#arrowRight").fadeOut();
+                            $("#scrollButton").fadeOut(function () {
+                                $(this).replaceWith('<span id="scrollButton"><span>scroll up</span><span class="glyphicon glyphicon-chevron-up"></span></span>')
+                            });
+                        }
+                        else {
+                            $("#arrowRight").fadeIn();
+                            $("#arrowLeft").fadeOut();
                             $("#scrollButton").fadeIn(function () {
                                 $(this).replaceWith('<span id="scrollButton"><span>scroll down</span><span class="glyphicon glyphicon-chevron-down"></span></span>')
-
                             });
-
-                            //$(".scrollDown").replaceWith('<div class="scrollDown"> scroll up<span class="glyphicon glyphicon-chevron-down"></span></div>');
                         }
                     }
                 });
@@ -197,4 +216,5 @@
     <script src="js/bootstrap.min.js"></script>
 
 </body>
+
 </html>

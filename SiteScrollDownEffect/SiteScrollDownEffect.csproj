@@ -89,6 +89,17 @@
     <Content Include="images\clouds\3.png" />
     <Content Include="images\clouds\4.png" />
     <Content Include="images\clouds\scroll1.png" />
+    <Content Include="images\crossbow.png" />
+    <Content Include="images\crossbow1.png" />
+    <Content Include="images\icons\Email-icon.png" />
+    <Content Include="images\icons\Facebook-icon.png" />
+    <Content Include="images\icons\Github-icon.png" />
+    <Content Include="images\icons\Google-Plus-icon.png" />
+    <Content Include="images\icons\HTML-3-icon.png" />
+    <Content Include="images\icons\HTML5-icon.png" />
+    <Content Include="images\icons\Skype-icon.png" />
+    <Content Include="images\icons\Youtube-icon.png" />
+    <Content Include="images\logo.jpg" />
     <Content Include="images\scripts\ballons_child.JPG" />
     <Content Include="images\scripts\ballons_parrent.JPG" />
     <Content Include="images\scripts\jinvert.JPG" />
